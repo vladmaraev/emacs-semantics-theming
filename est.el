@@ -423,7 +423,7 @@ and secondary information.")
 (est-defface est-heading-1 `((t :height 1.3 :inherit  est-heading)) "Face for level 1 headings")
 (est-defface est-heading-2 `((t :height 1.15 :inherit est-heading)) "Face for level 2 headings")
 (est-defface est-heading-3 `((t :height 1.1 :inherit est-heading)) "Face for level 3 headings")
-(est-defface est-heading   `((t :inherit bold)) "Face for level 4 headings and below")
+(est-defface est-heading   `((t :inherit medium)) "Face for level 4 headings and below")
 
 (est-defface est-frame-title
              `((t :extend t :background ,est-color-fg-salient :weight bold :foreground ,est-color-bg-default :height 1.7 :box (:line-width 40 :color ,est-color-fg-salient)))
