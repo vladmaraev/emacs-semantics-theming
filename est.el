@@ -668,6 +668,7 @@ pitch. Can be useful if the default face is variable pitch.")
    '(makefile-space               ((t :inherit warning)))
 
    '(org-default                  ((t :inherit variable-pitch))) ;; use (add-hook 'org-mode-hook 'buffer-face-mode) to actually use this.
+   '(org-agenda-structure         ((t :inherit est-salient)))
    '(org-archived                 ((t :inherit est-faded)))
    '(org-block                    ((t :inherit (est-force-fixed-pitch est-elusive))))
    '(org-block-begin-line         ((t :inherit org-block)))
