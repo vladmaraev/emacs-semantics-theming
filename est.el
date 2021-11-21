@@ -839,6 +839,26 @@ pitch. Can be useful if the default face is variable pitch.")
         est-color-fg-popout   "#00bbff")
   (est-reevaluate))
 
+(defun est-plan9 () ;; plan9 inspired theme
+  (interactive)
+  (setq est-color-fg-default     "#424242"
+        est-color-bg-default     "#FFFFE8"
+        est-color-bg-subtle      "#E5E5D0"
+        est-color-bg-selected    "#e8fce8"  ;; green-light
+        est-color-fg-salient     "#4fa8a8"  ;; cyan
+        est-color-fg-popout      "#b85c57") ;; purple
+  (est-reevaluate))
+
+(defun est-gruvbox-light () ;; gruvbox theme
+  (interactive)
+  (setq est-color-fg-default     "#3c3836"
+        est-color-bg-default     "#fbf1c7"
+        est-color-bg-subtle      "#ebdbb2"
+        est-color-bg-selected    "#d5c4a1"
+        est-color-fg-salient     "#9b0006"
+        est-color-fg-popout      "#076678")
+  (est-reevaluate))
+
 
 (provide 'est)
 
