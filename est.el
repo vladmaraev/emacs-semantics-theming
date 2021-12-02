@@ -423,7 +423,7 @@ and secondary information.")
 (est-defface est-heading-1 `((t :height 1.3 :inherit  est-heading)) "Face for level 1 headings")
 (est-defface est-heading-2 `((t :height 1.15 :inherit est-heading)) "Face for level 2 headings")
 (est-defface est-heading-3 `((t :height 1.1 :inherit est-heading)) "Face for level 3 headings")
-(est-defface est-heading   `((t :inherit medium)) "Face for level 4 headings and below")
+(est-defface est-heading   `((t :inherit bold)) "Face for level 4 headings and below")
 
 (est-defface est-frame-title
              `((t :extend t :background ,est-color-fg-salient :weight bold :foreground ,est-color-bg-default :height 1.7 :box (:line-width 40 :color ,est-color-fg-salient)))
@@ -668,7 +668,7 @@ pitch. Can be useful if the default face is variable pitch.")
    '(makefile-space               ((t :inherit warning)))
 
    '(org-default                  ((t :inherit variable-pitch))) ;; use (add-hook 'org-mode-hook 'buffer-face-mode) to actually use this.
-   '(org-agenda-structure         ((t :inherit est-salient)))
+   '(org-agenda-structure         ((t :inherit est-default)))
    '(org-archived                 ((t :inherit est-faded)))
    '(org-block                    ((t :inherit (est-force-fixed-pitch est-elusive))))
    '(org-block-begin-line         ((t :inherit org-block)))
@@ -850,7 +850,19 @@ pitch. Can be useful if the default face is variable pitch.")
         est-color-bg-subtle      "#E5E5D0"
         est-color-bg-selected    "#e8fce8"  ;; green-light
         est-color-fg-salient     "#4fa8a8"  ;; cyan
-        est-color-fg-popout      "#b85c57") ;; purple
+        est-color-fg-popout      "#b85c57"  ;; purple
+	) 
+  (custom-set-faces
+   '(font-lock-comment-face	((t :inherit est-faded :slant italic)))
+   '(org-agenda-structure       ((t :inherit est-default)))
+   '(org-agenda-date-weekend    ((t :inherit est-default :slant italic)))
+   '(org-agenda-date-today      ((t :inherit est-default :weight bold)))
+   '(org-inlinetask       ((t :inherit est-salient)))
+   '(org-agenda-date-today ((t :inherit est-default :weight bold)))
+   '(org-upcoming-distant-deadline ((t (:inherit est-salient))))
+   '(flyspell-duplicate ((t (:underline "DarkOrange"))))
+   '(flyspell-incorrect ((t (:underline "Red1"))))
+   )
   (est-reevaluate))
 
 (defun est-gruvbox-light () ;; gruvbox theme
@@ -861,6 +873,16 @@ pitch. Can be useful if the default face is variable pitch.")
         est-color-bg-selected    "#d5c4a1"
         est-color-fg-salient     "#9b0006"
         est-color-fg-popout      "#076678")
+  (custom-set-faces
+   '(font-lock-comment-face	((t :inherit est-faded :slant italic)))
+   '(org-agenda-structure       ((t :inherit est-default)))
+   '(org-agenda-date-weekend    ((t :inherit est-default :slant italic)))
+   '(org-agenda-date-today      ((t :inherit est-default :weight bold)))
+   '(org-inlinetask       ((t :inherit est-salient)))
+   '(org-agenda-date-today ((t :inherit est-default :weight bold)))
+   '(org-upcoming-distant-deadline ((t (:inherit est-salient))))
+   '(flyspell-duplicate ((t (:underline "DarkOrange"))))
+   '(flyspell-incorrect ((t (:underline "Red1")))))
   (est-reevaluate))
 
 (defun est-gruvbox-dark () ;; gruvbox theme
@@ -872,6 +894,16 @@ pitch. Can be useful if the default face is variable pitch.")
         est-color-fg-salient     "#98971a" ;; green-2
         est-color-fg-popout      "#cc241d" ;; red-1
         )
+  (custom-set-faces
+   '(font-lock-comment-face	((t :inherit est-faded :slant italic)))
+   '(org-agenda-structure       ((t :inherit est-default)))
+   '(org-agenda-date-weekend    ((t :inherit est-default :slant italic)))
+   '(org-agenda-date-today      ((t :inherit est-default :weight bold)))
+   '(org-inlinetask       ((t :inherit est-salient)))
+   '(org-agenda-date-today ((t :inherit est-default :weight bold)))
+   '(org-upcoming-distant-deadline ((t (:inherit est-salient))))
+   '(flyspell-duplicate ((t (:underline "DarkOrange"))))
+   '(flyspell-incorrect ((t (:underline "Red1")))))
   (est-reevaluate))
 
 
