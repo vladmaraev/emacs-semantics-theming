@@ -862,6 +862,8 @@ pitch. Can be useful if the default face is variable pitch.")
    '(org-upcoming-distant-deadline ((t (:inherit est-salient))))
    '(flyspell-duplicate ((t (:underline "DarkOrange"))))
    '(flyspell-incorrect ((t (:underline "Red1"))))
+   '(mu4e-header-highlight-face ((t (:inherit est-subtle :extend t))))
+   '(mu4e-related-face ((t (:inherit est-faded))))
    )
   (est-reevaluate))
 
