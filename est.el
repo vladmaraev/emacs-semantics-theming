@@ -532,8 +532,8 @@ pitch. Can be useful if the default face is variable pitch.")
    '(company-tooltip-annotation ((t :inherit shadow)))
    '(company-scrollbar-bg       ((t :inverse-video t :inherit est-shadow)))
    '(company-scrollbar-fg       ((t :inverse-video t :inherit est-emph)))
- 
-   '(completions-common-part      ((t :inherit est-faded)))
+
+   '(completions-common-part      ((t :inherit match)))
    '(completions-first-difference ((t)))
 
    '(dired-directory ((t :inherit est-salient)))
@@ -588,6 +588,7 @@ pitch. Can be useful if the default face is variable pitch.")
    '(helm-ff-dotted-directory        ((t :inherit est-faded)))
    '(helm-ff-executable              ((t :inherit est-popout)))
    '(helm-ff-file                    ((t :inherit est-faded)))
+   '(helm-ff-file-extension          ((t :inherit est-faded)))
    '(helm-ff-prefix                  ((t :inherit est-strong)))
    '(helm-grep-file                  ((t :inherit est-faded)))
    '(helm-grep-finish                ((t)))
@@ -605,6 +606,8 @@ pitch. Can be useful if the default face is variable pitch.")
    '(helm-buffer-not-saved           ((t :inherit est-popout)))
    '(helm-buffer-directory           ((t :inherit est-salient)))
    '(helm-buffer-saved-out           ((t :inherit est-critical)))
+
+   `(help-key-binding                ((t :inherit (est-emph est-subtle) :box (:line-width (1 . -1) :color ,est-color-fg-faded))))
 
    '(ido-only-match ((t :inherit match)))
 
@@ -667,6 +670,11 @@ pitch. Can be useful if the default face is variable pitch.")
 
    '(makefile-space               ((t :inherit warning)))
 
+   '(orderless-match-face-0 ((t :inherit match)))
+   '(orderless-match-face-1 ((t :inherit match)))
+   '(orderless-match-face-2 ((t :inherit match)))
+   '(orderless-match-face-3 ((t :inherit match)))
+
    '(org-default                  ((t :inherit variable-pitch))) ;; use (add-hook 'org-mode-hook 'buffer-face-mode) to actually use this.
    '(org-agenda-structure         ((t :inherit est-default)))
    '(org-archived                 ((t :inherit est-faded)))
@@ -725,6 +733,7 @@ pitch. Can be useful if the default face is variable pitch.")
    '(org-target                   ((t :inherit est-faded)))
    '(org-time-grid                ((t :inherit est-faded)))
    '(org-todo                     ((t :inherit est-popout)))
+   '(org-done                     ((t :inherit est-faded)))
    '(org-upcoming-deadline        ((t :inherit est-strong)))
    '(org-verbatim                 ((t :inherit est-emph est-force-fixed-pitch)))
    '(org-verse                    ((t :inherit est-faded)))
